@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Centrum schizofrenii</title>
+        <link rel="icon" type="image/x-icon" href="ikona.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Żyjemy w centrum schizofrenii">
+        <meta name="keywords" content="shizofrenia">
+        <link rel="stylesheet" href="styl.css">
+    </head>
+    <body id="bodylog">
+        <div class="przerwa"></div>
+        <div id="logowanie">
+
+            <!-- Przekierowanie danych do pliku PHP z logowaniem -->
+            <form action="zaloguj.php" method="post">
+
+
+             <!-- Jakies elementy graficzne wiecie o co chodzi  -->
+            <a href="index.html"><img src="logo2.png" id="logowanieimg" height="50px"></a>
+            <h3>Zaloguj sie w serwisie centrum schizofrenii</h3>
+           
+            <!-- Nazwa użytkownika-->
+            <p>NAZWA UZYTKOWNIKA</p>
+            <input  id="username" type="text" name="login">
+            
+            <!-- Hasło -->
+            <p>HASLO</p>
+            <input type="password" name="haslo"><br><br>
+
+
+            <!-- Zaloguj sie -->
+            <input type="submit" value="ZALOGUJ" id="login" >
+
+            <!-- Przejśćie do rejestracji -->
+            <p>Nowy użytkownik? <a href="rejestracja.html">Zarejestruj sie</a></p>
+
+
+
+            </form>
+        </div>
+        <div class="przerwa"></div>
+    </body>
+</html>

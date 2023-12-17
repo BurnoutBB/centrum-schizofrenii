@@ -1,0 +1,116 @@
+body{
+    background-color: black;
+    color:white;
+}
+#logo{
+    width: 30%;
+    float: left;
+    margin-left: 5%;
+    background-color: black;
+    height: 150px;
+}
+#menu{
+    font-family: 'schizophrenia Queue';
+}
+.wybur{
+    height: 80px;
+    width: 16%;
+    float: left;
+    font-size: 30px;
+    text-align: center;
+    background-color: black;
+}
+button{
+    background-color: transparent;
+    border: none;
+    font-family: 'schizophrenia Queue';
+    font-size: 30px;
+    color: white;
+    padding-top: 30px;
+    transition-duration: 0.05s;
+}
+button:hover{
+    font-size: 33px;
+    transition-duration: 0.05s;
+    color: rgb(160, 33, 33);
+}
+#text{
+    float: left;
+    width: 64%;
+    height: 70px;
+    color: rgb(160, 33, 33);
+    background-color: rgb(0, 0, 0);
+    vertical-align: top;
+    font-size: 40px;
+    display:flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+   
+}
+#czas{
+    font-size: 40px; 
+}
+#logowanie{
+    text-align: left;
+    margin-top: 60px;
+    font-family: "schizophrenia Queue";
+    height: 50px;
+    float: left;
+    width: 40%;
+}
+.przerwa{
+    width: 30%;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    float: left;
+}
+input[type="password"]{
+    background-color: black;
+    font-size: 20px;
+    border-color: white;
+    color:white;
+    font-family: 'schizophrenia Queue';
+    
+}
+#username{
+    background-color: black;
+}
+#login{
+    background-color: black;
+    color: white;
+    font-family: 'schizophrenia Queue';
+}
+input[type="text"]{
+    background-color: black;
+    font-size: 20px;
+    border-color: white;
+    font-family: 'schizophrenia Queue';
+    color:white; 
+}
+#bodylog{
+    zoom:150%;
+}
+input[type="submit"]{
+    border-color: white;  
+    transition-duration: 0.1s; 
+}
+input[type="submit"]:active{
+    border-color: white;
+    font-size: 16px;
+    transition-duration: 0.1s;
+}
+#logowanieimg{
+    opacity: 0.5;
+}
+a:link,a:visited,a:hover,a:active{
+    color: rgb(160, 33, 33);
+}
+#logowanie2{
+    text-align: left;
+    margin-top: 40px;
+    font-family: "schizophrenia Queue";
+    height: 50px;
+    float: left;
+    width: 40%;
+}
