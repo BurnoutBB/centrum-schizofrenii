@@ -12,14 +12,15 @@
     <body id="bodylog">
         <div class="przerwa"></div>
         <div id="logowanie2">
+            <form action="register.php" method="post">
             <a href="index.html"><img src="img/logo2.png" id="logowanieimg" height="50px"></a>
             <h3>Zaloguj sie w serwisie centrum schizofrenii</h3>
             <p>NAZWA UZYTKOWNIKA</p>
-            <input  id="username" type="text">
+            <input  id="username" type="text" name="username" required>
             <p>ADRES EMAIL</p>
-            <input  id="email" type="text">
+            <input  id="email" type="text" name="email" required>
             <p>HASLO</p>
-            <input type="password"><br><br>
+            <input type="password" name="password" required><br><br>
             <input type="submit" value="ZAREJESTRUJ" id="login">
             <p>Masz już konto? <a href="logowanie.html">Zaloguj się</a></p>
         </div>
