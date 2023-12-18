@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sss", $username, $password, $email);
 
     if ($stmt->execute()) {
-        echo "Rejestracja udana!";
+        header('Location: logowanie.html');
     } else {
         echo "Błąd rejestracji: " . $stmt->error;
     }
