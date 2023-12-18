@@ -8,36 +8,54 @@
         <meta name="description" content="Żyjemy w centrum schizofrenii">
         <meta name="keywords" content="shizofrenia">
         <link rel="stylesheet" href="css/styl.css">
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Obsługa formularza logowania
+                document.getElementById('login-form').addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    // Pobierz dane z formularza
+                    var formData = new FormData(this);
+
+                    // Wyślij żądanie AJAX do skryptu logowania
+                    fetch('login.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Aktualizuj treść elementu <p id="zlylogin"> z odpowiedzi serwera
+                        document.getElementById('zlylogin').textContent = data.message;
+
+                        // Dodaj dodatkową logikę, np. przekierowanie po udanym logowaniu
+                        if (data.success) {
+                            window.location.href = 'profile.php';
+                        }
+                    })
+                    .catch(error => console.error('Błąd:', error));
+                });
+            });
+        </script>
     </head>
     <body id="bodylog">
         <div class="przerwa"></div>
         <div id="logowanie">
-
             <!-- Przekierowanie danych do pliku PHP z logowaniem -->
-            <form action="login.php" method="post">
-
-
-             <!-- Jakies elementy graficzne wiecie o co chodzi  -->
-            <a href="index.html"><img src="img/logo2.png" id="logowanieimg" height="50px"></a>
-            <h3>Zaloguj sie w serwisie centrum schizofrenii</h3>
-           
-            <!-- Nazwa użytkownika-->
-            <p>NAZWA UZYTKOWNIKA</p>
-            <input  id="username" type="text" name="username" required>
-            
-            <!-- Hasło -->
-            <p>HASLO</p>
-            <input type="password" name="password" required><br><br>
-
-
-            <!-- Zaloguj sie -->
-            <input type="submit" value="ZALOGUJ" id="login" >
-
-            <!-- Przejśćie do rejestracji -->
-            <p>Nowy użytkownik? <a href="rejestracja.html">Zarejestruj sie</a></p>
-
-
-
+            <form id="login-form" action="login.php" method="post">
+                <!-- Jakies elementy graficzne wiecie o co chodzi -->
+                <a href="index.html"><img src="img/logo2.png" id="logowanieimg" height="50px"></a>
+                <h3>Zaloguj sie w serwisie centrum schizofrenii</h3>
+                <!-- Nazwa użytkownika-->
+                <p>NAZWA UZYTKOWNIKA</p>
+                <input  id="username" type="text" name="username" required>
+                <!-- Hasło -->
+                <p>HASLO</p>
+                <input type="password" name="password" required><br><br>
+                <!-- Zaloguj sie -->
+                <input type="submit" value="ZALOGUJ" id="login">
+                <p id="zlylogin"></p>
+                <!-- Przejśćie do rejestracji -->
+                <p>Nowy użytkownik? <a href="rejestracja.html">Zarejestruj sie</a></p>
             </form>
         </div>
         <div class="przerwa"></div>

@@ -12,17 +12,47 @@
     <body id="bodylog">
         <div class="przerwa"></div>
         <div id="logowanie2">
-            <form action="register.php" method="post">
-            <a href="index.html"><img src="img/logo2.png" id="logowanieimg" height="50px"></a>
-            <h3>Zaloguj sie w serwisie centrum schizofrenii</h3>
-            <p>NAZWA UZYTKOWNIKA</p>
-            <input  id="username" type="text" name="username" required>
-            <p>ADRES EMAIL</p>
-            <input  id="email" type="text" name="email" required>
-            <p>HASLO</p>
-            <input type="password" name="password" required><br><br>
-            <input type="submit" value="ZAREJESTRUJ" id="login">
-            <p>Masz już konto? <a href="logowanie.html">Zaloguj się</a></p>
+            <form action="register.php" method="post" id="register-form">
+                <a href="index.html"><img src="img/logo2.png" id="logowanieimg" height="50px"></a>
+                <h3>Zaloguj się w serwisie centrum schizofrenii</h3>
+                <p>NAZWA UŻYTKOWNIKA</p>
+                <input id="username" type="text" name="username" required>
+                <p>ADRES EMAIL</p>
+                <input id="email" type="text" name="email" required>
+                <p>HASŁO</p>
+                <input type="password" name="password" required><br><br>
+                <input type="submit" value="ZAREJESTRUJ" id="login">
+                <p id="zlylogin"></p>
+                <p>Masz już konto? <a href="logowanie.html">Zaloguj się</a></p>
+            </form>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Obsługa formularza rejestracji
+                    document.getElementById('register-form').addEventListener('submit', function (event) {
+                        event.preventDefault();
+
+                        // Pobierz dane z formularza
+                        var formData = new FormData(this);
+
+                        // Wyślij żądanie AJAX do skryptu rejestracji
+                        fetch('register.php', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            // Aktualizuj treść elementu <p id="zlylogin"> z odpowiedzi serwera
+                            document.getElementById('zlylogin').textContent = data.response;
+
+                            // Dodaj dodatkową logikę, np. przekierowanie po udanej rejestracji
+                            if (data.redirect) {
+                                window.location.href = data.redirect;
+                            }
+                        })
+                        .catch(error => console.error('Błąd:', error));
+                    });
+                });
+            </script>
         </div>
         <div class="przerwa"></div>
     </body>
