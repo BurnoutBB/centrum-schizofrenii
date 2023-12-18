@@ -23,9 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $checkEmailResult = $checkEmailStmt->get_result();
 
     if ($checkUsernameResult->num_rows > 0) {
-        $response = "Login już istnieje. Wybierz inny.";
+        $response = "Ta nazwa jest juz zajeta";
     } elseif ($checkEmailResult->num_rows > 0) {
-        $response = "Adres email już istnieje. Wybierz inny.";
+        $response = "Ten email jest juz zajety";
     } else {
         // Dodaj nowego użytkownika do bazy danych
         $insertQuery = "INSERT INTO logowanie (Nazwa_uzytkownika, haslo, email) VALUES (?, ?, ?)";

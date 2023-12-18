@@ -57,12 +57,16 @@ button:hover{
     font-size: 40px; 
 }
 #logowanie{
-    text-align: left;
+    text-align: center;
     margin-top: 60px;
     font-family: "schizophrenia Queue";
-    height: 50px;
+    height: 500px;
     float: left;
     width: 40%;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid;
+    border-color: white;
+    border-radius: 25px;
 }
 .przerwa{
     width: 30%;
@@ -112,10 +116,14 @@ a:link,a:visited,a:hover,a:active{
     color: rgb(160, 33, 33);
 }
 #logowanie2{
-    text-align: left;
-    margin-top: 40px;
+    text-align: center;
+    margin-top: 60px;
     font-family: "schizophrenia Queue";
-    height: 50px;
+    height: 550px;
     float: left;
     width: 40%;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid;
+    border-color: white;
+    border-radius: 25px;
 }

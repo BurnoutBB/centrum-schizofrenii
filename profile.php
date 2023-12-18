@@ -29,22 +29,58 @@ $stmt->close();
     <meta name="description" content="Żyjemy w centrum schizofrenii">
     <meta name="keywords" content="shizofrenia">
     <link rel="stylesheet" href="css/styl2.css">
+      <script>
+        // Skrypt JavaScript do aktualizacji komunikatów
+        var phpKomunikat = "<?php echo isset($_SESSION['phpKomunikat']) ? $_SESSION['phpKomunikat'] : ''; ?>";
+        if (phpKomunikat) {
+            document.getElementById('bledyphp').innerHTML = phpKomunikat;
+            <?php unset($_SESSION['phpKomunikat']); ?>
+        }
+    </script>
 </head>
 <body>
     <div id="gura">
         <a href="index.html"><img src="img/logo2.png"  height="50px"></a>
-        <p>Twoje konto:</p>
+        <h2>Twoje konto:</h2>
     </div>
     <div id="lewo"></div>
 
     <div id="userimg">
-        <img src="img/user.png" height="300px">
-    </div>
+    <?php
+    // Sprawdź, czy użytkownik już ma przypisaną ścieżkę do zdjęcia profilowego w bazie danych
+    $stmt_picture = $conn->prepare("SELECT profile_picture FROM logowanie WHERE id_uzytkownika = ?");
+    $stmt_picture->bind_param("i", $user_id);
+    $stmt_picture->execute();
+    $stmt_picture->bind_result($profile_picture);
+    $stmt_picture->fetch();
+    $stmt_picture->close();
+
+    // Jeśli użytkownik ma przypisaną ścieżkę do zdjęcia, wyświetl to zdjęcie
+    if (!empty($profile_picture)) {
+        echo '<img src="' . $profile_picture . '" height="300px" width="300px">';
+    } else {
+        echo '<img src="img/user.png" height="300px" width="300px">';
+    }
+    ?>
+    
+</div>
 
     <div id="uzytkownik">
         <h1>Nazwa użytkownika: <?php echo $username; ?></h1>
         <h2>Email: <?php echo $email; ?></h2><br/>
         <a href="logout.php"><h3> Wyloguj sie!</h3></a>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" id="dodajzdjecie" >
+        <input type="submit" value="Prześlij zdjęcie" name="submit" id="przeslijzdjecie">
+    </form>
+    <p id="bledyphp"></p>
+    <script>
+    var phpKomunikat = "<?php echo isset($_SESSION['phpKomunikat']) ? $_SESSION['phpKomunikat'] : ''; ?>";
+    if (phpKomunikat) {
+        document.getElementById('bledyphp').innerHTML = phpKomunikat;
+        <?php unset($_SESSION['phpKomunikat']); ?>
+    }
+</script>
     </div>
     
     <div id="prawo"></div>
