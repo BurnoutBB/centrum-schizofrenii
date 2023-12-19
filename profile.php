@@ -57,9 +57,9 @@ $stmt->close();
 
     // Jeśli użytkownik ma przypisaną ścieżkę do zdjęcia, wyświetl to zdjęcie
     if (!empty($profile_picture)) {
-        echo '<img src="' . $profile_picture . '" height="300px" width="300px">';
+        echo '<img  stye="border-radius: 25px;" src="' . $profile_picture . '" height="300px" width="300px">';
     } else {
-        echo '<img src="img/user.png" height="300px" width="300px">';
+        echo '<img stye="border-radius: 25px;" src="img/user.png" height="300px" width="300px">';
     }
     ?>
     

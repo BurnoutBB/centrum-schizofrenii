@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+}
+#gura{
+    width: 100%;
+    height: 100px;
+    float: left;
+    
+}
+
+#post{
+    border: 1px solid;
+    border-color: white;
+    width: 50%;
+    height: 450px;
+    float: left;
+    margin-left: 25%;
+    margin-right: 25% ;
+    border-radius: 25px;
+    text-align: center;
+}
+p{
+    color: white;
+    text-align: left;
+    margin-left: 15px;
+}

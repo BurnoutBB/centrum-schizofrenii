@@ -17,11 +17,11 @@
                 <a href="index.html"><img src="img/logo2.png" id="logowanieimg" height="50px"></a>
                 <h3>Zaloguj się w serwisie centrum schizofrenii</h3>
                 <p>NAZWA UŻYTKOWNIKA</p>
-                <input id="username" type="text" name="username" required>
+                <input id="username" type="text" name="username" required minlength="4" maxlength="15">
                 <p>ADRES EMAIL</p>
                 <input id="email" type="text" name="email" required>
                 <p>HASŁO</p>
-                <input type="password" name="password" required><br><br>
+                <input type="password" name="password" required placeholder="Minimum 8 znakuw" minlength="8"><br><br>
                 <input type="submit" value="ZAREJESTRUJ" id="login">
                 <p id="zlylogin"></p>
                 <p>Masz już konto? <a href="logowanie.html">Zaloguj się</a></p>
