@@ -40,7 +40,7 @@ $stmt->close();
 </head>
 <body>
     <div id="gura">
-        <a href="index.html"><img src="img/logo2.png"  height="50px"></a>
+        <a href="index.php"><img src="img/logo2.png"  height="50px"></a>
         <h2>Twoje konto:</h2>
     </div>
     <div id="lewo"></div>

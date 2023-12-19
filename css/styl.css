@@ -157,13 +157,14 @@ a:link,a:visited,a:hover,a:active{
     background-color: rgb(29, 29, 29);
 }
 .user-info img {
-    padding-top: 10px;
+    margin-top: 50px;
     border-radius: 25%;
-    border-radius: 50%;
+    
 }
 .nowypost {
     display: flex; /* Ustawienie kontenera postu jako flexbox */
     align-items: center; /* Wyśrodkowanie elementów wzdłuż osi Y */
+    word-wrap: break-word;
     
 }
 
@@ -174,17 +175,18 @@ a:link,a:visited,a:hover,a:active{
     flex-grow: 1; /* Elastyczne rozszerzanie treści posta, aby zajmować dostępne miejsce */
 }
 .user-info p {
-    margin-left: 20px;
-    margin-bottom: 30px;
-    color: red;
+    margin-left: 1px;
+    
+    color: rgb(155, 155, 155);
 }
 .nowypost h3{
     font-size: 30px;
-    margin-bottom: 150px;
+    margin-bottom: -3px;
     font-family: Arial;
 }
 .nowypost p{
     text-align: left;
+    margin-bottom: 50px;
 }
 .no-posts{
     text-align: center;
@@ -194,4 +196,14 @@ a:link,a:visited,a:hover,a:active{
     padding-bottom: 50px ;
     font-family: Arial;
     font-size: 50px;
+}
+.post-content p {
+    overflow-wrap: break-word; 
+}
+.no-posts{
+    font-family: Arial;
+    font-size: 40px;
+    p{
+        margin-top: 60px;
+    }
 }

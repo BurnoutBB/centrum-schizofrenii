@@ -29,7 +29,7 @@ $tresc = $_POST['tresc'];
 $sql = "INSERT INTO posty (id_uzytkownika, tytul, tresc) VALUES ('$id_uzytkownika', '$tytul', '$tresc')";
 
 if ($conn->query($sql) === TRUE) {
-    header("Location: index.html");
+    header("Location: index.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE HTML>
 <html lang="pl">
     <head>
@@ -59,9 +61,10 @@
                 echo '</div>';
                 
                 // Wyświetlanie tytułu i treści posta obok zdjęcia
+                $wrappedContent = wordwrap($row['tresc'], 160, "<br />\n", true);
                 echo '<div class="post-content">';
                 echo '<h3>' . $row['tytul'] . '</h3>';
-                echo '<p>' . $row['tresc'] . '</p>';
+                echo '<p>' . $wrappedContent . '</p>';
                 echo '</div>';
                 
                 echo '</div>';
