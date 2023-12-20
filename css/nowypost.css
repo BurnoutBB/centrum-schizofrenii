@@ -1,6 +1,7 @@
 body{
     background-color: black;
     font-family: Arial;
+    zoom:125%;
   
 }
 #post{
@@ -48,14 +49,15 @@ body{
     border: 1px solid;
     border-color: white;
     border-radius: 25px;
-    float: left;
+    float: right;
+    margin-right: 9%;
 }
 textarea{
     margin-top: 4px;
     height: 85px;
     resize: none;
     margin-left:20px ;
-    width: 100%;
+    width: 95%;
     background-color: black;
     border: none;
     color:white;
@@ -99,4 +101,45 @@ input[type="submit"]:active{
         margin-left: 90px;
     }
 
+}
+.nowykomentarz{
+    margin-top: 20px;
+    width: 70%;
+    height: 100px;
+    float: right;
+    border: 1px solid;
+    border-color: white;
+    border-radius: 25px;
+    margin-right: 9%;
+}
+.uzytkownik{
+    margin-left: 1%;
+    width: 10%;
+    height: 90%;
+    text-align: center;
+    color: gray;
+    font-size: 8px;
+    float: left;
+    margin-right: 2%;
+    
+    img{
+        margin-top: 3px;
+        border-radius: 10px;
+    }
+    p{
+        margin-top: -2px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+   
+   
+    
+}
+.tresckomentarza{
+    float: left;
+    width: 85%;
+    height: 90%;
+    margin-top: 5px;
+    color: white;
+    
 }
