@@ -115,9 +115,9 @@ a:link,a:visited,a:hover,a:active{
     border-radius: 25px;
 }
 .nowypost,.no-posts{
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
     height: 200px;
     float: left;
     border: 1px solid;
@@ -130,6 +130,7 @@ a:link,a:visited,a:hover,a:active{
     p{
         font-family: arial;
     }
+    
    
 }
 #przw{
@@ -164,7 +165,7 @@ a:link,a:visited,a:hover,a:active{
 .nowypost {
     display: flex; /* Ustawienie kontenera postu jako flexbox */
     align-items: center; /* Wyśrodkowanie elementów wzdłuż osi Y */
-    word-wrap: break-word;
+    
     
 }
 
@@ -174,19 +175,14 @@ a:link,a:visited,a:hover,a:active{
 .post-content {
     flex-grow: 1; /* Elastyczne rozszerzanie treści posta, aby zajmować dostępne miejsce */
 }
+
 .user-info p {
     margin-left: 1px;
-    
+    margin-bottom: 50px;
     color: rgb(155, 155, 155);
 }
-.nowypost h3{
-    font-size: 30px;
-    margin-bottom: -3px;
-    font-family: Arial;
-}
 .nowypost p{
-    text-align: left;
-    margin-bottom: 50px;
+  
 }
 .no-posts{
     text-align: center;
@@ -197,13 +193,22 @@ a:link,a:visited,a:hover,a:active{
     font-family: Arial;
     font-size: 50px;
 }
-.post-content p {
-    overflow-wrap: break-word; 
-}
 .no-posts{
     font-family: Arial;
     font-size: 40px;
     p{
         margin-top: 60px;
     }
+}
+#user-info{
+    text-align: center;
+}
+#postout{
+    font-family: Arial;
+    font-size: 30px;
+    margin-top: 10px;
+    color: white;
+}
+.post-content{
+
 }

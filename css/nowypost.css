@@ -1,0 +1,102 @@
+body{
+    background-color: black;
+    font-family: Arial;
+  
+}
+#post{
+    width: 80%;
+    height: 300px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    border: 1px solid;
+    border-color: white;
+    border-radius: 25px;
+    float: left;
+}
+#userinfo{
+    width: 20%;
+    height: 270px;
+
+    font-family: Arial;
+    text-align: center;
+    float: left;
+    color: rgb(139, 139, 139);
+    img{
+    
+       margin-top: 20px; 
+       border-radius: 20px;
+    }
+   
+}
+#post-content{
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: 3%;
+    width: 75%;
+    height: 270px;
+    float: left;
+    color: white;
+
+  
+}
+#komentarz{
+    width: 70%;
+    height: 100px;
+    
+    margin-top: 20px;
+    border: 1px solid;
+    border-color: white;
+    border-radius: 25px;
+    float: left;
+}
+textarea{
+    margin-top: 4px;
+    height: 85px;
+    resize: none;
+    margin-left:20px ;
+    width: 100%;
+    background-color: black;
+    border: none;
+    color:white;
+    }
+
+textarea:active{
+    border: none;
+}
+input[type="submit"]{
+    margin-top: 20px;
+    color: white;
+    background: none;
+    margin-right: auto;
+    font-family: Arial;
+    font-size: 40px;
+    border: 1px solid;
+    border-color: white;
+    border-radius: 10px;
+    transition-duration: 0.2s;
+}
+input[type="submit"]:active{
+    font-size: 42px;
+    transition-duration: 0.2s;
+
+}
+#tekst{
+    float: left;
+    width: 880px;
+    
+}
+#dodaj{
+    float: left;
+}
+#powrut{
+    float: left;
+    width: 20%;
+    height: 100px;
+    text-align: center;
+    margin-top: 40px;
+    img{
+        margin-left: 90px;
+    }
+
+}

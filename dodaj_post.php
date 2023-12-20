@@ -1,12 +1,7 @@
 <?php
 session_start();
 
-// Sprawdź, czy użytkownik jest zalogowany
-if (!isset($_SESSION['user_id'])) {
-    // Przekieruj go do strony logowania lub innej strony
-    header('Location: login.php'); // Zmień login.php na stronę logowania
-    exit();
-}
+
 
 // Połączenie z bazą danych (ustaw swoje dane dostępu)
 $servername = "localhost";
