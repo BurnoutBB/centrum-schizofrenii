@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'schizophrenia Queue';
+    src: url(czcionka.TTF);
+  }
 body{
     background-color: black;
     font-family: Arial;

@@ -19,7 +19,7 @@
                 <p>NAZWA UŻYTKOWNIKA</p>
                 <input id="username" type="text" name="username" required minlength="4" maxlength="15">
                 <p>ADRES EMAIL</p>
-                <input id="email" type="text" name="email" required>
+                <input id="email" type="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Wprowadź poprawny adres e-mail" required>
                 <p>HASŁO</p>
                 <input type="password" name="password" required placeholder="Minimum 8 znakuw" minlength="8"><br><br>
                 <input type="submit" value="ZAREJESTRUJ" id="login">

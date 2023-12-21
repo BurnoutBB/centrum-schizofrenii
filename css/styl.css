@@ -214,3 +214,11 @@ a:hover{
     color: rgb(160, 33, 33);
     transition-duration: 0.1s;
 }
+#email{
+    background-color: black;
+    border: 1px solid;
+    border-color: white;
+    font-size: 20px;
+    color:white;
+    font-family: 'schizophrenia Queue';
+}
